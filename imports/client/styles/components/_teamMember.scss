@@ -37,13 +37,17 @@
     }
     .card-title {
         line-height: 40px;
-        font-size: 20px;
+        font-size: 18px;
 
     }
     .card-reveal {
         z-index: 888;
         i.right {
             margin-top: -25px;
+        }
+        .card-reveal-name {
+            font-weight: bold;
+            font-size: 18px;
         }
     }
     .card-action {

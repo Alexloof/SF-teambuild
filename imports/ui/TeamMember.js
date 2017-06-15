@@ -5,7 +5,7 @@ import moment from "moment";
 class TeamMember extends Component {
     render() {
         return (
-            <div className="col s12 m6 team-member">
+            <div className="col s12 m4 team-member">
                 <div className="card sticky-action">
                     <div className="card-image waves-effect waves-block waves-light">
                         <img className="activator" src={this.props.member.pic}/>
@@ -16,7 +16,7 @@ class TeamMember extends Component {
                         <a href={"mailto:" + this.props.member.email} target="_blank"><i className="material-icons">email</i></a>
                     </div>
                     <div className="card-reveal">
-                        <span>{this.props.member.name}</span>
+                        <span className="card-reveal-name">{this.props.member.name}</span>
                         <span className="card-title grey-text text-darken-4"><i className="material-icons right">close</i></span>
                         <p>{this.props.member.info}</p>
                     </div>

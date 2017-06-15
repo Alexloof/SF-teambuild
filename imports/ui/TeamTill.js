@@ -18,7 +18,7 @@ class TeamTill extends React.Component {
     render() {
         return(
             <div>
-                <h3 className="center-align till-title">SELECTED TEAM</h3>
+                <h3 className="center-align till-title">SELECTED TEAM <span className="chip">{this.props.selectedMembers.length}</span></h3>
                 <ul className="collection selected-team-list z-depth-1">
                     {this.props.selectedMembers.length !== 0 ? this.props.selectedMembers.map((member, index) => {
                         return(
@@ -26,7 +26,7 @@ class TeamTill extends React.Component {
                                 <img src={member.pic} className="circle"/>
                                 <span className="title">{member.name}</span>
                                 <p>{member.role}</p>
-                                <a href="#!" className="secondary-content"><i className="material-icons">close</i></a>
+                                <a style={{cursor: "pointer"}} onClick={() => this.props.removeSelectedMember(member._id)} className="secondary-content"><i className="material-icons">close</i></a>
                             </li>
                         );
                         

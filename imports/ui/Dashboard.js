@@ -21,6 +21,17 @@ class DashBoard extends React.Component {
             selectedMembers: members
         });
     }
+    removeSelectedMember(_id) {
+        let newMembers = [];
+        this.state.selectedMembers.map((member, index) => {
+            if (member._id !== _id) {
+                newMembers.push(member);
+            }
+        });
+        this.setState({
+            selectedMembers: newMembers
+        });
+    }
     render() {
         return (
             <div>
@@ -31,7 +42,7 @@ class DashBoard extends React.Component {
                     </div>
                     <div className="col s12 m4">
                         <div className="team-till">
-                            <TeamTill selectedMembers={this.state.selectedMembers}/>
+                            <TeamTill selectedMembers={this.state.selectedMembers} removeSelectedMember={this.removeSelectedMember.bind(this)}/>
                         </div>
                     </div>
                 </div>
