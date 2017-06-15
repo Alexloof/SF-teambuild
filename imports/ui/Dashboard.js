@@ -9,11 +9,11 @@ export default () => {
     return (
         <div>
             <PrivateHeader title="Signifly" />
-            <div>
-                <div>
+            <div className="row">
+                <div className="col s12 m8">
                     <TeamMemberList/>
                 </div>
-                <div>
+                <div className="col s12 m4">
                     <TeamTill/>
                 </div>
             </div>

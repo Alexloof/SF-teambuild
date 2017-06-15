@@ -31,19 +31,20 @@ export class Signup extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div>
-                    <h1>Join</h1>
+            <div className="row login-register">
+                <div className="col s12 m4 login-register-box z-depth-2">
+                    <h1 className="center-align">Join</h1>
 
                     {this.state.error ? <p>{this.state.error}</p> : undefined}
 
                     <form onSubmit={this.onSubmit.bind(this)} noValidate>
                         <input type="email" ref="email" name="email" placeholder="Email" />
                         <input type="password" ref="password" name="password" placeholder="Password" />
-                        <button className="button">Create Account</button>
+                        <button className="btn">Create Account</button>
                     </form>
-
-                    <Link to="/">Already have an account?</Link>
+                    <div className="center-align">
+                        <Link to="/" className="sublink">Already have an account?</Link>
+                    </div>
                 </div>
 
             </div>

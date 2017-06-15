@@ -1,0 +1,19 @@
+.login-register {
+    display: flex;
+    justify-content: center;
+    transform: translateY(30vh);
+    .login-register-box {
+        background-color: white;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
+        background-color: #df1927;
+        height: 50px;
+    }
+    .sublink {
+        color: #grey;
+    }
+}

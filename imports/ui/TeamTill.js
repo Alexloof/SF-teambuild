@@ -13,7 +13,7 @@ export class TeamTill extends React.Component {
     render() {
         return(
             <div>
-                "Kassan"
+                SELECTED TEAM
             </div>
         );       
     }

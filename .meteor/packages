@@ -22,4 +22,4 @@ session
 practicalmeteor:mocha
 react-meteor-data@=0.2.9
 fourseven:scss
-materialize:materialize
+materialize:materialize@=0.97.0

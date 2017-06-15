@@ -4,9 +4,8 @@ import { createContainer } from "meteor/react-meteor-data";
 
 export const TeamListHeader = (props) => {
     return (
-        <div>
-            <button className="button" onClick={() => props.meteorCall("members.insert", (err, res) => {
-            })}>Create Member</button>
+        <div className="team-list-header">
+            <a onClick={() => props.meteorCall("members.insert")} className="btn-floating btn-large waves-effect waves-light btn-add"><span style={{fontSize: "25px"}}>+</span></a>
         </div>
     );
 }
