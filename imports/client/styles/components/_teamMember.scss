@@ -2,16 +2,37 @@
     .card {
         background-color: #efefef;
     }
+    img {
+        height: 300px;
+    }
     .card-name{
         position: absolute;
-        top: 10px;
-        z-index: 999;
+        top: 63%;
+        z-index: 777;
+        left: 0;
+        height: 11%;
         font-size: 22px;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.56);
+        letter-spacing: 2px;
+        line-height: 45px;
     }
     .card-content {
         padding: 5px 20px;
+        i {
+            color: black;
+            transform: translateY(5px);
+            margin-left: 10%;
+            &:hover {
+                color: #df1927;
+            }
+        }
         i.right {
             margin-top: 15px;
+            margin-left: 0;
+            transform: none;
         }
     }
     .card-title {
@@ -20,9 +41,9 @@
 
     }
     .card-reveal {
-        padding-top: 50px;
+        z-index: 888;
         i.right {
-            margin-top: -40px;
+            margin-top: -25px;
         }
     }
     .card-action {
@@ -30,10 +51,10 @@
         padding: 10px;
         a {
             color: #df1927;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             transition: 0.3s all ease-out;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 14px;
             &:hover {
                 color: #df1927;
             }

@@ -1,6 +1,5 @@
 import { Monog } from "meteor/mongo";
 import { Meteor } from "meteor/meteor";
-import moment from "moment";
 import SimpleSchema from "simpl-schema";
 
 export const Members = new Mongo.Collection("members");
@@ -12,16 +11,35 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-    "members.insert"() {
+    "members.insert"(pic, name, email, info, role) {
         if (!this.userId) {
             throw new Meteor.Error("not-authorized");
         }
 
-        return Members.insert({
-            pic: "",
-            name: "",
-            email: "",
-            info: ""
+        new SimpleSchema({
+            pic: {
+                type: String,
+            },
+            name: {
+                type: String,
+            },
+            email: {
+                type: String,
+            },
+            info: {
+                type: String,
+            },
+            role: {
+                type: String,
+            },
+        }).validate({ pic, name, email, info, role });
+
+        Members.insert({
+            pic,
+            name,
+            email,
+            info,
+            role
         });
     },
     "members.remove"(_id) {

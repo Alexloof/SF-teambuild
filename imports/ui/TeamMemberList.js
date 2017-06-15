@@ -13,8 +13,9 @@ class TeamMemberList extends Component {
             <div className="team-member-list">
                 <TeamListHeader/>
                 <div className="row">
-                    {this.props.members.map((member, index) => {
-                        return <TeamMember key={index} member={member}/>
+                    {this.props.members.length === 0 ? <p className="center-align">There is no team here at the moment... Come back later!</p>
+                    : this.props.members.map((member, index) => {
+                        return <TeamMember key={index} member={member} selectMember={this.props.selectMember}/>
                     })}
                 </div>
             </div>
