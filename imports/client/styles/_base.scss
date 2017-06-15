@@ -10,3 +10,15 @@ body {
     color: $body-default-color;
     font-family: $body-default-font-familty;
 }
+
+.row {
+    margin: 0 !important;
+}
+
+.main-content {
+    margin-top: 84px !important;
+}
+
+.collection {
+    border-radius: 3px;
+}

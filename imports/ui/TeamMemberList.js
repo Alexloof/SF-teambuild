@@ -10,11 +10,15 @@ import TeamMember from "./TeamMember";
 class TeamMemberList extends Component {
     render() {
         return (
-            <div>
+            <div className="team-member-list">
                 <TeamListHeader/>
-                TeamMemberList
-                <TeamMember/>
+                <div className="row">
+                    {this.props.members.map((member, index) => {
+                        return <TeamMember key={index} member={member}/>
+                    })}
+                </div>
             </div>
+            
         );
     }
 }
@@ -23,6 +27,6 @@ export default createContainer(() => {
     Meteor.subscribe("members");
 
     return {
-
+        members: Members.find({}).fetch(),
     };
 }, TeamMemberList);

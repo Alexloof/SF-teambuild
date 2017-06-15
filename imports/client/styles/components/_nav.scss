@@ -1,11 +1,17 @@
 nav {
     background-color: white;
     padding: 0 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
     .brand-logo {
-        color: #3c4654;
+        color: #df1927;
     }
     li a {
-        color: #3c4654;
+        color: #df1927;
         letter-spacing: 3px;
+        font-weight: bold;
     }
 }

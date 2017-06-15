@@ -33,7 +33,7 @@ export class Signup extends React.Component {
         return (
             <div className="row login-register">
                 <div className="col s12 m4 login-register-box z-depth-2">
-                    <h1 className="center-align">Join</h1>
+                    <h3 className="center-align">Join</h3>
 
                     {this.state.error ? <p>{this.state.error}</p> : undefined}
 

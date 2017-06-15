@@ -1,0 +1,42 @@
+.team-member {
+    .card {
+        background-color: #efefef;
+    }
+    .card-name{
+        position: absolute;
+        top: 10px;
+        z-index: 999;
+        font-size: 22px;
+    }
+    .card-content {
+        padding: 5px 20px;
+        i.right {
+            margin-top: 15px;
+        }
+    }
+    .card-title {
+        line-height: 40px;
+        font-size: 20px;
+
+    }
+    .card-reveal {
+        padding-top: 50px;
+        i.right {
+            margin-top: -40px;
+        }
+    }
+    .card-action {
+        text-align: center;
+        padding: 10px;
+        a {
+            color: #df1927;
+            letter-spacing: 5px;
+            transition: 0.3s all ease-out;
+            font-weight: 600;
+            font-size: 13px;
+            &:hover {
+                color: #df1927;
+            }
+        }
+    }
+}
