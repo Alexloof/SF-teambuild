@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: $body-background-color;
+    color: $body-default-color;
+    font-family: $body-default-font-familty;
+}
